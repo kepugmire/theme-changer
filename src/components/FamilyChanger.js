@@ -12,7 +12,8 @@ export default class FamilyChanger extends Component {
 
   render() {
     return (
-      <select className="dropDownContainer">
+      <select className="dropDownContainer"
+              onChange={ (e) => this.props.updateFamily(e.target.value)}>
         <option value="monospace"> Monospace </option>
         <option value="arial"> Arial </option>
         <option value="courier"> Courier </option>
